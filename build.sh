@@ -13,5 +13,8 @@ flutter pub get
 # 构建Web版本
 flutter build web --release --base-href="/zhiyuanhui/"
 
+# 创建Vercel需要的输出目录
+mkdir -p /vercel/output/static
+
 # 复制构建产物到Vercel的输出目录
-cp -r build/web/* /vercel/output/static/
+cp -r build/web/. /vercel/output/static/
